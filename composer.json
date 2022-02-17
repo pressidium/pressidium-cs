@@ -1,0 +1,37 @@
+{
+  "name": "pressidium/pressidium-cs",
+  "description": "PHP_CodeSniffer rules (sniffs) to enforce Pressidium coding standards",
+  "keywords": [
+    "phpcs",
+    "standards",
+    "WordPress"
+  ],
+  "type": "phpcodesniffer-standard",
+  "authors": [
+    {
+      "name": "Konstantinos Pappas",
+      "email": "konpap@pressidium.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "squizlabs/php_codesniffer": "^3.3.1"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5 || ^0.6"
+  },
+  "suggest": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.6 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically."
+  },
+  "scripts": {
+    "check-cs": [
+      "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs"
+    ],
+    "fix-cs": [
+      "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"
+    ],
+    "install-codestandards": [
+      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+    ]
+  }
+}
