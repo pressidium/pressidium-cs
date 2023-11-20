@@ -1,9 +1,6 @@
 <?php
 /**
- * Pressidium Coding Standard.
- *
- * @link https://pressidium.atlassian.net/wiki/spaces/MUP/pages/3125018666/Coding+Standards
- * @link https://pressidium.atlassian.net/wiki/spaces/MUP/pages/3274801153/Custom+Sniffs
+ * Pressidium Coding Standards.
  */
 
 namespace PressidiumCS\Sniffs\WP;
