@@ -7,6 +7,7 @@ namespace PressidiumCS\Sniffs\WP;
 
 use PHP_CodeSniffer\Util\Tokens;
 use WordPressCS\WordPress\Sniff;
+use WordPressCS\WordPress\Helpers\ContextHelper;
 
 /**
  * Flag WordPress filter callbacks without a return statement.
@@ -45,7 +46,7 @@ class FilterReturnSniff extends Sniff {
         $token = $this->tokens[ $stackPtr ];
 
         // If within `add_filter`
-        $functionPtr = $this->is_in_function_call( $stackPtr, $this->valid_functions );
+        $functionPtr = ContextHelper::is_in_function_call( $this->phpcsFile, $stackPtr, $this->valid_functions );
         if ( $functionPtr === false ) {
             return;
         }
